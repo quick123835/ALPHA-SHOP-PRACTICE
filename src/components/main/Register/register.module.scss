@@ -1,0 +1,33 @@
+.registerContainer{
+    width: 50%;
+    padding:25px;
+    h2.registerTitle{
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 38px;
+        color: var(--main-text);
+    }
+}
+
+
+.progressContainer{
+    width: 90%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.progressBar{
+    display: flex;
+    flex-grow: 1;
+    max-width: 60px;
+    height: 1px;
+    margin: 0px 8px;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.formContainer{
+    width: 90%;
+    height: 100%;
+    margin-top: 64px;
+}
