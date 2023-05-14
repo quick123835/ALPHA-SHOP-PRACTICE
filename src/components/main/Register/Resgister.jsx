@@ -7,6 +7,7 @@ import Step2 from './Steps/Step2'
 import Step3 from './Steps/Step3'
 import Progress from './Progresses/Progress'
 import Num1 from '../../../assests/icons/num1.svg'
+import ProgressControl from './ProgressControl/ProgressControl'
 
 
 const Resgister = () => {
@@ -33,10 +34,11 @@ const Resgister = () => {
           />
         </section>
         <section className={styles.formContainer}>
-          <Step1/>
-          {/* <Step2/> */}
+          {/* <Step1/> */}
+          <Step2/>
           {/* <Step3/> */}
         </section>
+        <ProgressControl />
       </section>
 
     )

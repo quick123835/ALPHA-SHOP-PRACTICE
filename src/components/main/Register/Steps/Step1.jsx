@@ -3,7 +3,7 @@ import styles from './Step1.module.scss'
 
 const Step1 = () =>{
     return(
-        <form class="col col-12" data-phase="address">
+        <form data-phase="address">
             <h3 className={styles.formTitle}>寄送地址</h3>
             <section className={styles.formBody}>
                 <div className={styles.formFirstRow}>
