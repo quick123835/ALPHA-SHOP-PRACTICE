@@ -8,9 +8,22 @@ import Step3 from './Steps/Step3'
 import Progress from './Progresses/Progress'
 import Num1 from '../../../assests/icons/num1.svg'
 import ProgressControl from './ProgressControl/ProgressControl'
+import {useState} from 'react'
 
 
 const Resgister = () => {
+  const [step , setStep] = useState(1)
+
+  const handleProgressNextClick = () => {
+    setStep(step + 1)
+  }
+
+  const handleProgressPreClick = () => {
+    if(step > 1){
+      setStep(step - 1)
+    }
+  }
+
     return(
       <section  className={styles.registerContainer} data-phase="1" data-total-price="0">
         <h2 className={styles.registerTitle}>結帳</h2>
@@ -34,11 +47,13 @@ const Resgister = () => {
           />
         </section>
         <section className={styles.formContainer}>
-          {/* <Step1/> */}
-          <Step2/>
-          {/* <Step3/> */}
+          { step === 1 ? <Step1 /> : step === 2 ? <Step2/> : <Step3/>}
         </section>
-        <ProgressControl />
+        <ProgressControl 
+          onNextClick={handleProgressNextClick}
+          onPreClick={handleProgressPreClick}
+          step={step}
+        />
       </section>
 
     )
