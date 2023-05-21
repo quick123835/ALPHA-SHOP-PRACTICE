@@ -1,8 +1,10 @@
 import { useFreightContext } from '../../../../contexts/FreightContext'
+import { useMainContext } from '../../../../contexts/MainContext'
 import { useCartContext } from '../../../../contexts/cartContext'
 import styles from './Step2.module.scss'
 
 const Step2 = () => {
+    const mainInfo = useMainContext().current
     const setFreight = useFreightContext().setFreight
     const setTotal = useCartContext().setTotal
     const total = useCartContext().total
@@ -13,11 +15,15 @@ const Step2 = () => {
         if(total>=500){
             setTotal(total-500)
         }
+        if(mainInfo.total>500){
+            mainInfo.total-=500
+        }
     }
 
     const handleDhlChange = (e) => {
         setFreight(e.target.value)
         setTotal(total+500)
+        mainInfo.total+=500
     }
 
 
