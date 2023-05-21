@@ -43,10 +43,14 @@
     }
 
     .radioInfo {
+        width: 100%;
         display: flex;
         flex-flow:column;
 
         .col {
+            width: 100%;
+            display:flex;
+            justify-content:space-between;
             margin-bottom: 2px;
         }
         .text {
@@ -57,6 +61,7 @@
         .price, .period {
             font-size: 12px;
             line-height: 16px;
+            font-weight: 700;
         }
     }
 

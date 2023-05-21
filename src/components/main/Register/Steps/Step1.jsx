@@ -9,9 +9,9 @@ const Step1 = () =>{
                 <div className={styles.formFirstRow}>
                     <div className={`${styles.inputGroup} ${styles.sex}`}>
                         <div className={styles.inputLabel}>稱謂</div>
-                        <div class="select-container">
-                            <select>
-                            <option value="mr" selected>先生</option>
+                        <div className={styles.selectContainer}>
+                            <select defaultValue>
+                            <option value="mr" defaultValue>先生</option>
                             <option value="ms">女士</option>
                             <option value="mx">不明</option>
                             </select>

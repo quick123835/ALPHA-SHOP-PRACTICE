@@ -32,18 +32,21 @@ const Resgister = () => {
             label='寄送地址'
             text='1'
             src={Num1}
+            step={step}
           />
           <span  className={styles.progressBar} data-order="1"></span>
           <Progress 
             label='運送方式'
             text='2'
             src={Num2}
+            step={step}
           />
           <span  className={styles.progressBar} data-order="2"></span>
           <Progress 
             label='付款資訊'
             text='3'
             src={Num3}
+            step={step}
           />
         </section>
         <section className={styles.formContainer}>
